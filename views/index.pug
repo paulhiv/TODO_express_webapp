@@ -1,0 +1,33 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title} now get to work
+  h2 TODO.STEP.1: get the CRUD working 
+  li - GET /ressources: 
+  p JSON: Renvoi le contenus de la requêtes sql
+  p HTML: affiche la page index.tpl
+  li GET /ressources/:id
+  p JSON: Renvoi le contenus de la requêtes sql
+  p HTML: affiche la page show.tpl 
+  li POST /ressources
+  p JSON: {message : 'sucess'}
+  p HTML: redirect sur index.tpl
+  li PUT/PATCH /ressources/:id
+  p JSON: {message : 'sucess'}   
+  p HTML: redirect sur index.tpl
+  li DELETE /ressources/:id
+  p JSON: {message : 'sucess'}
+  p HTML: redirect sur index.tpl
+  li GET /ressources/add
+  p HTML: afficher un formulaire
+  li GET /ressources/:id/edit
+  p HTML: afficher le même formulaire que pour /add
+  li GET /users/:id/todos
+  p JSON: renvoi les todos de l'utilisateur
+  p HTML: affiche un tableau des todos de l'utilisateur
+  li middleware de 404 sera necessaire pour toutes les requêtes qui n'arrive pas à destination: 
+  p JSON: {status: 404 not found}
+  p HTML: une page de 404 
+
+
